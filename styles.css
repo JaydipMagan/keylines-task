@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+.banner{
+    padding-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#kl{
+    margin-left: auto;
+    margin-right: auto;
+}
