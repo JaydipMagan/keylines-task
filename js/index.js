@@ -32,6 +32,7 @@ window.onload = () => {
     })
     
   });
+  initListners();
 };
 
 function getDataPromise(){
@@ -74,11 +75,13 @@ function getDataPromise(){
           id: "l"+idNumber, 
           id1 : link.source, 
           id2: link.target, 
+          a2 : true,
           d : {
             value : link.value
           },
           t:link.value,
-          fs:50
+          fs:50,
+          w : link.value
         });
         // update in and out degree of nodes
         nodeDegrees[link.source].out+=1;
@@ -99,4 +102,18 @@ function getDataPromise(){
       resolve(keylinesData);
   });
   })
+}
+
+function initListners(){
+  document.getElementById("default").addEventListener("click", ()=>{setChart("default")}); 
+  document.getElementById("he").addEventListener("click", ()=>{setChart("he")}); 
+}
+
+function setChart(type){
+  if(type=="default"){
+    chart.layout('standard');
+  }
+  if(type=="he"){
+    chart.layout('sequential', {level: 'total'})
+  }
 }
