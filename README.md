@@ -14,6 +14,22 @@ Simple visualiation of Victor Hugo's novel Les Miserables to highlight the most 
 * Highlight nodes connected to a node when clicked
     * All neighbouring nodes are highlighted when node is clicked on
 
+## Built With
+
+* Javascript
+* Keylines 
+* Bootstrap
+
+# How to run
+
+1. Clone repo
+    ```
+    git clone https://github.com/JaydipMagan/keylines-task.git
+    ```
+2. Run a web server of your choice for live-server option. Command below is for running using Node.js
+    ```
+    npx live-server
+    ```
 
 ## Important 
 
