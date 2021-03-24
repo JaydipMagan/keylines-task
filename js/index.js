@@ -45,6 +45,7 @@ window.onload = () => {
  * @returns formatted JSON data
  */
 function getDataPromise(){
+  console.log("Getting JSON data.");
   return new Promise((resolve,reject) => {
     $.getJSON('https://bost.ocks.org/mike/miserables/miserables.json', function(data) {
       var keylinesData = {
@@ -105,7 +106,7 @@ function getDataPromise(){
         item.d.total = item.d.outdegree+item.d.indegree;
         item.e = item.d.total;
         maxDegree = Math.max(maxDegree,item.e);
-        console.log(item.t,item.e);
+        // console.log(item.t,item.e);
         }
       });
       
@@ -137,10 +138,12 @@ function setChart(type){
   if(type=="default"){
     chartType = type;
     chart.layout('standard',{consistent:true});
+    console.log("Chart type : default");
   }
   if(type=="he"){
     chartType = type;
-    chart.layout('sequential',{consistent:true,level: 'total'})
+    chart.layout('sequential',{consistent:true,level: 'total'});
+    console.log("Chart type : heirarchy");
   }
   if(type=="totaldegree"){
     // update the node size in the chart data dictionary
@@ -150,6 +153,7 @@ function setChart(type){
        }
     });
     chart.load(chartdata);
+    console.log("Data type : total degree");
     setChart(chartType);
   }
   if(type=="indegree"){
@@ -160,6 +164,7 @@ function setChart(type){
        }
     });
     chart.load(chartdata);
+    console.log("Data type : indegree");
     setChart(chartType);
   }
   if(type=="outdegree"){
@@ -170,6 +175,7 @@ function setChart(type){
        }
     });
     chart.load(chartdata);
+    console.log("Data type : outdegree");
     setChart(chartType);
   }
   
