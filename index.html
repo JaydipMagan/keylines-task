@@ -16,10 +16,12 @@
     <div class="banner">
         <h1>Jaydip Magan</h1>
         <p>Simple visualiation of Victor Hugo's novel Les Miserables to highlight the most important characters.</p>
-        <button type="button" class="btn btn-dark" id="default" data-bs-toggle="tooltip" data-bs-placement="top" title="Show default chart layout">Default</button>
+        <button type="button" class="btn btn-dark" id="mpopular" data-bs-toggle="tooltip" data-bs-placement="top" title="Change size of node based on most edges">Most popular</button>
         <button type="button" class="btn btn-dark" id="he" data-bs-toggle="tooltip" data-bs-placement="top" title="Show sequential chart layout">Heirarchy</button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="Change size of node based on most edges">Most popular</button>
-        <button type="button" class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="Change size of node based on least edges">Lest popular</button>
+        <button type="button" class="btn btn-dark" id="totaldegree" data-bs-toggle="tooltip" data-bs-placement="top" title="Use total of edges as metric for popularity">Total degree</button>
+        <button type="button" class="btn btn-dark" id="indegree" data-bs-toggle="tooltip" data-bs-placement="top" title="Use incoming edges as metric for popularity">Indegree popular</button>
+        <button type="button" class="btn btn-dark" id="outdegree" data-bs-toggle="tooltip" data-bs-placement="top" title="Use outgoing edges as metric for popularity">Outdegree</button>
+        
     </div>
     <div id="kl" style="width: 90vw; height: 100vh;" ></div>
 </body>
